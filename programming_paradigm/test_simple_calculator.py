@@ -1,20 +1,20 @@
-class SimpleCalculator:
-    """A simple calculator class that supports basic arithmetic operations."""
+from simple_calculator import SimpleCalculator 
+import unittest
 
-    def add(self, a, b):
-        """Return the addition of a and b."""
-        return a + b
 
-    def subtract(self, a, b):
-        """Return the subtraction of b from a."""
-        return a - b
+class TestSimpleCalculator(unittest.TestCase):
+    def test_addition(self):
+        result = SimpleCalculator.add(5, 3)
+        self.assertEqual(self.calc.add)
+    def test_subtraction(self):
+        result = SimpleCalculator.subtract(5, 3)
+        self.assertEqual(self.calc.subtract) 
+    def test_multiplication(self):
+        result = SimpleCalculator.multiply(5, 3)
+        self.assertEqual(self.calc.multiply)
+    def test_division(self, a, b):
+        assert b != 0, "Error: Division by zero!"
+    def test_division(self):
+        self.assertEqual(self.calc.divide)
 
-    def multiply(self, a, b):
-        """Return the multiplication of a and b."""
-        return a * b
-
-    def divide(self, a, b):
-        """Return the division of a by b. Returns None if b is zero."""
-        if b == 0:
-            return None
-        return a / b
+    SimpleCalculator()
